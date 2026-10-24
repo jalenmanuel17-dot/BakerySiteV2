@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Neighborhood Bakery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="site-header">
+      <img class="logo" src="media/bakery-logo_c.png" alt="Neighborhood Bakery logo" width="140">
+      <p>Neighborhood Bakery</p>
+    </div>
+    <nav aria-label="Main navigation">
+      <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>Contact Us</h1>
+    <p>Have a question about our baked goods? Send us a message using the form below.</p>
+    <p><strong>Note:</strong> This is a sample form for a class project. It does not send messages yet.</p>
+    <form id="contact-form" action="#" method="get" novalidate>
+      <fieldset>
+        <legend>Your Information</legend>
+        <p><label for="full-name">Full name</label><br>
+        <input type="text" id="full-name" name="full-name" required minlength="2" autocomplete="name"><span class="error" id="full-name-error" aria-live="polite"></span></p>
+        <p><label for="email">Email address</label><br>
+        <input type="email" id="email" name="email" required autocomplete="email"><span class="error" id="email-error" aria-live="polite"></span></p>
+      </fieldset>
+      <fieldset>
+        <legend>Your Message</legend>
+        <p><label for="topic">What is your question about?</label><br>
+        <select id="topic" name="topic" required>
+          <option value="">Choose a topic</option>
+          <option value="bread">Bread</option>
+          <option value="other">Other baked goods</option>
+          <option value="general">General question</option>
+        </select><span class="error" id="topic-error" aria-live="polite"></span></p>
+        <p><label for="message">Message</label><br>
+        <textarea id="message" name="message" rows="5" required minlength="10"></textarea><span class="error" id="message-error" aria-live="polite"></span></p>
+      </fieldset>
+      <button type="submit">Send Message</button>
+      <p id="form-result" aria-live="polite"></p>
+    </form>
+  </main>
+  <footer>
+    <p>&copy; 2026 Neighborhood Bakery. Baked with care.</p>
+  </footer>
+  <script src="script.js" defer></script>
+</body>
+</html>
